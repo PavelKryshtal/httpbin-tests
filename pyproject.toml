@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "httpbin-api-tests"
+version = "0.1.0"
+description = "API tests for httpbin"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+requests = "^2.32"
+python-dotenv = "^1.0"
+faker = "^30.0"
+brotlicffi = "^1.2.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3"
+pytest-html = "^4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--html=reports/report.html --self-contained-html"
+log_cli = true
+log_cli_level = "INFO"
+pythonpath = ["."]
