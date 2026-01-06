@@ -1,4 +1,3 @@
-# utils/requests/get_request.py
 from urllib.parse import urljoin
 import logging
 import requests
